@@ -29,12 +29,19 @@ export default routes;
 
 ## Using consumer for styled component
 ```js
+import { withConsumerAC } from 'hocs/AC';
 withConsumerAC(StyledComponent)
 ```
 
-withConsumerAC provide props "stage" inside your component. Stage have varinat: 'start', 'end'.
+withConsumerAC provide props "stage" inside your component. Stage have varinats: 'start', 'end'.
+
+
 'start' - when page is create
+
+
 'end' - when page is destroy
+
+
 ```js
 animation: ${({ stage }) => stage === 'end' ? animationEnd : animationStart} 0.5s linear forwards;
 ```
